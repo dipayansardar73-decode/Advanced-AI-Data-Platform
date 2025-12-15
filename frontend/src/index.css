@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-black text-gray-200 font-inter overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(112, 0, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 100% 0%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-cyber-glass backdrop-blur-lg border border-cyber-glass-border rounded-xl shadow-lg;
+  }
+  .cyber-button {
+    @apply px-4 py-2 bg-gradient-to-r from-cyber-secondary to-cyber-primary text-white font-bold rounded hover:opacity-90 transition-all shadow-[0_0_10px_rgba(0,240,255,0.5)];
+  }
+  .cyber-input {
+    @apply bg-cyber-dark border border-gray-700 text-white rounded px-3 py-2 w-full focus:outline-none focus:border-cyber-primary transition-colors;
+  }
+}
